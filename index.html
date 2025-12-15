@@ -1,16 +1,466 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <script src="scripts.js"></script>
-  <title>Website Under Construction</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Otavio Menoni - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Website Under Construction</h1>
-    <p>We're currently working on our website. Please check back soon!</p>
-  </div>
+    <div class="retro-sun"></div>
+    <div class="sun-lines" id="sunLines"></div>
+
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showPage('home')">Home</a></li>
+            <li><a href="#" onclick="showPage('resume')">Resume</a></li>
+            <li><a href="#" onclick="showPage('html-cheat')">HTML Cheat</a></li>
+            <li><a href="#" onclick="showPage('css-cheat')">CSS Cheat</a></li>
+            <li><a href="#" onclick="showPage('js-cheat')">JS Cheat</a></li>
+        </ul>
+    </nav>
+
+    <div id="home" class="page active">
+        <div class="container">
+            <div class="hero">
+                <h1>OTAVIO JUAN MENONI</h1>
+                <h2>Software Development Student</h2>
+                <p class="age-display">Age: <span id="ageCalc"></span> years old</p>
+                <p style="color: var(--retro-blue); font-size: 1.2rem;">📍 Calgary, AB, Canada 🇧🇷 Brazilian</p>
+            </div>
+
+            <div class="info-section">
+                <h3>Welcome to My Portfolio</h3>
+                <p style="text-align: center; font-size: 1.1rem; line-height: 1.8;">
+                    I'm a passionate Software Development student at Bow Valley College, new to the IT world 
+                    but eager to learn and grow. Originally from Brazil, I bring a unique perspective and 
+                    dedication to every project I undertake.
+                </p>
+                <div style="text-align: center;">
+                    <a href="#" onclick="showPage('about')" class="about-btn">About Me</a>
+                </div>
+            </div>
+
+            <div class="info-section">
+                <h3>Quick Facts</h3>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h4>🎓 Education</h4>
+                        <p>Software Development<br>Bow Valley College<br>Calgary, AB</p>
+                    </div>
+                    <div class="info-card">
+                        <h4>💻 Career Focus</h4>
+                        <p>New to IT and excited to dive into software development and programming</p>
+                    </div>
+                    <div class="info-card">
+                        <h4>🌎 Background</h4>
+                        <p>Brazilian living in Canada, bringing diverse perspectives to tech</p>
+                    </div>
+                    <div class="info-card">
+                        <h4>🎯 Interests</h4>
+                        <p>Physical activities, sports enthusiast, video games lover, and animal advocate</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="about" class="page">
+        <div class="container">
+            <div class="info-section">
+                <h3>About Me</h3>
+                <div style="line-height: 2; font-size: 1.1rem;">
+                    <p style="margin-bottom: 1.5rem;">
+                        <strong style="color: var(--retro-pink);">🎮 Gaming & Sports Enthusiast</strong><br>
+                        I'm passionate about video games and sports! Whether it's competing in virtual worlds 
+                        or enjoying physical activities, I love the challenge and excitement that both bring. 
+                        Gaming has taught me problem-solving and strategic thinking, while sports keep me active 
+                        and energized.
+                    </p>
+                    <p style="margin-bottom: 1.5rem;">
+                        <strong style="color: var(--retro-pink);">💪 Physical Fitness</strong><br>
+                        Physical activities are an important part of my daily routine. I believe in maintaining 
+                        a healthy balance between mental challenges (like coding) and physical wellness. This 
+                        balance helps me stay focused and productive in my studies and projects.
+                    </p>
+                    <p style="margin-bottom: 1.5rem;">
+                        <strong style="color: var(--retro-pink);">🐾 Animal Lover</strong><br>
+                        I absolutely love animals! They bring joy and companionship to life. My appreciation 
+                        for animals has taught me empathy, responsibility, and the importance of caring for 
+                        those who depend on us.
+                    </p>
+                    <p style="margin-bottom: 1.5rem;">
+                        <strong style="color: var(--retro-pink);">💻 IT Journey</strong><br>
+                        As someone new to the IT world, I'm embracing every learning opportunity with enthusiasm. 
+                        Every line of code, every bug fixed, and every project completed is a step forward in 
+                        my journey to becoming a skilled software developer. I'm excited about the endless 
+                        possibilities that technology offers!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="resume" class="page">
+        <div class="container">
+            <div class="info-section">
+                <h3>Resume</h3>
+                
+                <h4 style="color: var(--retro-yellow); font-size: 1.5rem; margin: 2rem 0 1rem 0;">Personal Information</h4>
+                <table style="width: 100%; border-collapse: collapse; margin-bottom: 2rem;">
+                    <tr style="border-bottom: 1px solid var(--retro-purple);">
+                        <td style="padding: 0.8rem; font-weight: bold; color: var(--retro-blue);">Full Name:</td>
+                        <td style="padding: 0.8rem;">Otavio Juan Menoni</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--retro-purple);">
+                        <td style="padding: 0.8rem; font-weight: bold; color: var(--retro-blue);">Date of Birth:</td>
+                        <td style="padding: 0.8rem;">September 5, 1997</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--retro-purple);">
+                        <td style="padding: 0.8rem; font-weight: bold; color: var(--retro-blue);">Location:</td>
+                        <td style="padding: 0.8rem;">Calgary, Alberta, Canada</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--retro-purple);">
+                        <td style="padding: 0.8rem; font-weight: bold; color: var(--retro-blue);">Nationality:</td>
+                        <td style="padding: 0.8rem;">Brazilian 🇧🇷</td>
+                    </tr>
+                </table>
+
+                <h4 style="color: var(--retro-yellow); font-size: 1.5rem; margin: 2rem 0 1rem 0;">Education</h4>
+                <div style="background: rgba(0,0,0,0.3); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--retro-pink); margin-bottom: 2rem;">
+                    <p style="font-size: 1.2rem; color: var(--retro-pink); margin-bottom: 0.5rem;">Software Development</p>
+                    <p style="color: var(--retro-blue);">Bow Valley College</p>
+                    <p>Calgary, Alberta, Canada</p>
+                    <p style="margin-top: 0.5rem; font-style: italic;">Currently Enrolled</p>
+                </div>
+
+                <h4 style="color: var(--retro-yellow); font-size: 1.5rem; margin: 2rem 0 1rem 0;">Skills & Interests</h4>
+                <ul style="list-style-position: inside; line-height: 2;">
+                    <li>🌐 Web Development (HTML, CSS, JavaScript)</li>
+                    <li>💡 Problem Solving & Analytical Thinking</li>
+                    <li>🎮 Gaming & Virtual Environments</li>
+                    <li>⚽ Sports & Physical Activities</li>
+                    <li>🐾 Animal Care & Welfare</li>
+                    <li>🌍 Cross-cultural Communication (Portuguese/English)</li>
+                    <li>📚 Quick Learner & Adaptable</li>
+                </ul>
+
+                <h4 style="color: var(--retro-yellow); font-size: 1.5rem; margin: 2rem 0 1rem 0;">Career Objective</h4>
+                <div style="background: rgba(0,0,0,0.3); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--retro-blue);">
+                    <p style="line-height: 1.8;">
+                        As a Software Development student new to the IT industry, I am eager to apply my growing 
+                        technical skills and passion for technology in a professional environment. I'm seeking 
+                        opportunities to contribute to innovative projects while continuing to learn and develop 
+                        my expertise in software development. My diverse interests and background provide me with 
+                        a unique perspective that I bring to every challenge.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="html-cheat" class="page">
+        <div class="container">
+            <div class="info-section">
+                <h3>HTML Cheat Sheet</h3>
+                <p style="margin-bottom: 2rem; color: var(--retro-blue);">Essential HTML elements and their usage</p>
+
+                <div class="info-card" style="margin-bottom: 1rem;">
+                    <h4>1. &lt;!DOCTYPE html&gt;</h4>
+                    <p>Declares the document type and HTML version. Always the first line in an HTML document.</p>
+                </div>
+
+                <div class="info-card" style="margin-bottom: 1rem;">
+                    <h4>2. &lt;html&gt;</h4>
+                    <p>Root element that wraps all content on the page. Contains lang attribute for language.</p>
+                </div>
+
+                <div class="info-card" style="margin-bottom: 1rem;">
+                    <h4>3. &lt;head&gt;</h4>
+                    <p>Contains meta information about the document (title, links to CSS, charset, etc.)</p>
+                </div>
+
+                <div class="info-card" style="margin-bottom: 1rem;">
+                    <h4>4. &lt;meta charset="UTF-8"&gt;</h4>
+                    <p>Specifies character encoding for the HTML document. UTF-8 supports all languages.</p>
+                </div>
+
+                <div class="info-card" style="margin-bottom: 1rem;">
+                    <h4>5. &lt;title&gt;</h4>
+                    <p>Sets the title shown in browser tab. Important for SEO and user experience.</p>
+                </div>
+
+                <div class="info-card" style="margin-bottom: 1rem;">
+                    <h4>6. &lt;body&gt;</h4>
+                    <p>Contains all visible content: text, images, links, tables, lists, etc.</p>
+                </div>
+
+                <div class="info-card" style="margin-bottom: 1rem;">
+                    <h4>7. &lt;h1&gt; to &lt;h6&gt;</h4>
+                    <p>Heading tags. h1 is largest/most important, h6 is smallest. Use hierarchically.</p>
+                </div>
+
+                <div class="info-card" style="margin-bottom: 1rem;">
+                    <h4>8. &lt;p&gt;</h4>
+                    <p>Paragraph tag. Used for blocks of text. Automatically adds space before and after.</p>
+                </div>
+
+                <div class="info-card" style="margin-bottom: 1rem;">
+                    <h4>9. &lt;a href=""&gt;</h4>
+                    <p>Anchor tag for links. href attribute specifies destination URL. Can link to pages or sections.</p>
+                </div>
+
+                <div class="info-card" style="margin-bottom: 1rem;">
+                    <h4>10. &lt;img src="" alt=""&gt;</h4>
+                    <p>Image tag. src is file path, alt is description for accessibility. Self-closing tag.</p>
+                </div>
+
+                <div class="info-card" style="margin-bottom: 1rem;">
+                    <h4>11. &lt;div&gt;</h4>
+                    <p>Division/container element. Block-level. Used to group elements for styling or layout.</p>
+                </div>
+
+                <div class="info-card" style="margin-bottom: 1rem;">
+                    <h4>12. &lt;span&gt;</h4>
+                    <p>Inline container for text. Used to style part of text without breaking flow.</p>
+                </div>
+
+                <div class="info-card" style="margin-bottom: 1rem;">
+                    <h4>13. &lt;ul&gt; and &lt;li&gt;</h4>
+                    <p>Unordered list with list items. Creates bullet points. Good for non-sequential items.</p>
+                </div>
+
+                <div class="info-card" style="margin-bottom: 1rem;">
+                    <h4>14. &lt;ol&gt; and &lt;li&gt;</h4>
+                    <p>Ordered list with list items. Creates numbered list. Use for sequential steps.</p>
+                </div>
+
+                <div class="info-card" style="margin-bottom: 1rem;">
+                    <h4>15. &lt;table&gt;, &lt;tr&gt;, &lt;td&gt;</h4>
+                    <p>Table elements: table container, table row, table data cell. Use for tabular data.</p>
+                </div>
+
+                <div class="info-card" style="margin-bottom: 1rem;">
+                    <h4>16. &lt;form&gt;</h4>
+                    <p>Container for input elements. action attribute sets where to send data, method sets how.</p>
+                </div>
+
+                <div class="info-card" style="margin-bottom: 1rem;">
+                    <h4>17. &lt;input type=""&gt;</h4>
+                    <p>Input field. Type can be text, email, password, number, checkbox, radio, submit, etc.</p>
+                </div>
+
+                <div class="info-card" style="margin-bottom: 1rem;">
+                    <h4>18. &lt;button&gt;</h4>
+                    <p>Clickable button. Can be used in forms or with JavaScript for interactions.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="css-cheat" class="page">
+        <div class="container">
+            <div class="info-section">
+                <h3>CSS Cheat Sheet</h3>
+                <p style="margin-bottom: 2rem; color: var(--retro-blue);">Essential CSS properties and techniques</p>
+
+                <div class="info-card" style="margin-bottom: 1rem;">
+                    <h4>1. color</h4>
+                    <p>Sets text color. Values: color names, hex (#ff0000), rgb(255,0,0), or hsl(0,100%,50%).</p>
+                </div>
+
+                <div class="info-card" style="margin-bottom: 1rem;">
+                    <h4>2. background-color</h4>
+                    <p>Sets background color of element. Same value types as color property.</p>
+                </div>
+
+                <div class="info-card" style="margin-bottom: 1rem;">
+                    <h4>3. font-size</h4>
+                    <p>Sets text size. Units: px (pixels), em (relative to parent), rem (relative to root), % (percentage).</p>
+                </div>
+
+                <div class="info-card" style="margin-bottom: 1rem;">
+                    <h4>4. font-family</h4>
+                    <p>Sets font type. List multiple fonts as fallbacks. Use quotes for multi-word fonts.</p>
+                </div>
+
+                <div class="info-card" style="margin-bottom: 1rem;">
+                    <h4>5. margin</h4>
+                    <p>Space outside element border. Can set all sides or individually (margin-top, margin-right, etc.)</p>
+                </div>
+
+                <div class="info-card" style="margin-bottom: 1rem;">
+                    <h4>6. padding</h4>
+                    <p>Space inside element border. Creates breathing room around content. Same syntax as margin.</p>
+                </div>
+
+                <div class="info-card" style="margin-bottom: 1rem;">
+                    <h4>7. border</h4>
+                    <p>Creates border around element. Syntax: width style color (e.g., 2px solid black).</p>
+                </div>
+
+                <div class="info-card" style="margin-bottom: 1rem;">
+                    <h4>8. display</h4>
+                    <p>Controls element layout. Common values: block, inline, inline-block, flex, grid, none.</p>
+                </div>
+
+                <div class="info-card" style="margin-bottom: 1rem;">
+                    <h4>9. position</h4>
+                    <p>Sets positioning method. Values: static (default), relative, absolute, fixed, sticky.</p>
+                </div>
+
+                <div class="info-card" style="margin-bottom: 1rem;">
+                    <h4>10. flexbox (display: flex)</h4>
+                    <p>Modern layout system. Properties: justify-content, align-items, flex-direction, gap.</p>
+                </div>
+
+                <div class="info-card" style="margin-bottom: 1rem;">
+                    <h4>11. grid (display: grid)</h4>
+                    <p>2D layout system. Properties: grid-template-columns, grid-template-rows, gap.</p>
+                </div>
+
+                <div class="info-card" style="margin-bottom: 1rem;">
+                    <h4>12. width and height</h4>
+                    <p>Sets element dimensions. Can use px, %, vw/vh (viewport units), or auto.</p>
+                </div>
+
+                <div class="info-card" style="margin-bottom: 1rem;">
+                    <h4>13. transition</h4>
+                    <p>Animates property changes. Syntax: property duration timing-function delay.</p>
+                </div>
+
+                <div class="info-card" style="margin-bottom: 1rem;">
+                    <h4>14. :hover pseudo-class</h4>
+                    <p>Applies styles when mouse hovers over element. Great for interactive effects.</p>
+                </div>
+
+                <div class="info-card" style="margin-bottom: 1rem;">
+                    <h4>15. box-shadow</h4>
+                    <p>Adds shadow to element. Syntax: h-offset v-offset blur spread color.</p>
+                </div>
+
+                <div class="info-card" style="margin-bottom: 1rem;">
+                    <h4>16. text-align</h4>
+                    <p>Aligns text horizontally. Values: left, right, center, justify.</p>
+                </div>
+
+                <div class="info-card" style="margin-bottom: 1rem;">
+                    <h4>17. @media queries</h4>
+                    <p>Creates responsive designs. Example: @media (max-width: 768px) for mobile styles.</p>
+                </div>
+
+                <div class="info-card" style="margin-bottom: 1rem;">
+                    <h4>18. z-index</h4>
+                    <p>Controls stacking order of positioned elements. Higher values appear on top.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="js-cheat" class="page">
+        <div class="container">
+            <div class="info-section">
+                <h3>JavaScript Cheat Sheet</h3>
+                <p style="margin-bottom: 2rem; color: var(--retro-blue);">Essential JavaScript concepts and methods</p>
+
+                <div class="info-card" style="margin-bottom: 1rem;">
+                    <h4>1. Variables (let, const, var)</h4>
+                    <p>Store data. let and const are block-scoped. const can't be reassigned. Avoid var.</p>
+                </div>
+
+                <div class="info-card" style="margin-bottom: 1rem;">
+                    <h4>2. console.log()</h4>
+                    <p>Prints output to browser console. Essential for debugging and testing code.</p>
+                </div>
+
+                <div class="info-card" style="margin-bottom: 1rem;">
+                    <h4>3. Functions</h4>
+                    <p>Reusable code blocks. Syntax: function name(parameters) { code } or arrow: (params) => { code }</p>
+                </div>
+
+                <div class="info-card" style="margin-bottom: 1rem;">
+                    <h4>4. getElementById()</h4>
+                    <p>Selects HTML element by id attribute. Returns single element or null if not found.</p>
+                </div>
+
+                <div class="info-card" style="margin-bottom: 1rem;">
+                    <h4>5. querySelector()</h4>
+                    <p>Selects first element matching CSS selector. More flexible than getElementById.</p>
+                </div>
+
+                <div class="info-card" style="margin-bottom: 1rem;">
+                    <h4>6. addEventListener()</h4>
+                    <p>Attaches event handler to element. Syntax: element.addEventListener('event', function).</p>
+                </div>
+
+                <div class="info-card" style="margin-bottom: 1rem;">
+                    <h4>7. if/else statements</h4>
+                    <p>Conditional logic. Executes code based on whether condition is true or false.</p>
+                </div>
+
+                <div class="info-card" style="margin-bottom: 1rem;">
+                    <h4>8. for loops</h4>
+                    <p>Repeats code a specific number of times. Syntax: for(let i=0; i&lt;10; i++) { code }</p>
+                </div>
+
+                <div class="info-card" style="margin-bottom: 1rem;">
+                    <h4>9. Arrays</h4>
+                    <p>Ordered list of values. Created with []. Access with index: array[0]. Has methods like push, pop.</p>
+                </div>
+
+                <div class="info-card" style="margin-bottom: 1rem;">
+                    <h4>10. Objects</h4>
+                    <p>Store key-value pairs. Created with {}. Access with dot notation: object.key or object['key'].</p>
+                </div>
+
+                <div class="info-card" style="margin-bottom: 1rem;">
+                    <h4>11. innerHTML</h4>
+                    <p>Gets or sets HTML content of element. Example: element.innerHTML = '&lt;p&gt;New content&lt;/p&gt;'.</p>
+                </div>
+
+                <div class="info-card" style="margin-bottom: 1rem;">
+                    <h4>12. classList</h4>
+                    <p>Manipulates CSS classes. Methods: add(), remove(), toggle(), contains().</p>
+                </div>
+
+                <div class="info-card" style="margin-bottom: 1rem;">
+                    <h4>13. setTimeout()</h4>
+                    <p>Executes code after delay. Syntax: setTimeout(function, milliseconds).</p>
+                </div>
+
+                <div class="info-card" style="margin-bottom: 1rem;">
+                    <h4>14. setInterval()</h4>
+                    <p>Repeatedly executes code at intervals. Syntax: setInterval(function, milliseconds).</p>
+                </div>
+
+                <div class="info-card" style="margin-bottom: 1rem;">
+                    <h4>15. Math object</h4>
+                    <p>Mathematical operations. Methods: Math.random(), Math.floor(), Math.round(), Math.max().</p>
+                </div>
+
+                <div class="info-card" style="margin-bottom: 1rem;">
+                    <h4>16. Date object</h4>
+                    <p>Work with dates and times. Create: new Date(). Methods: getFullYear(), getMonth(), getDate().</p>
+                </div>
+
+                <div class="info-card" style="margin-bottom: 1rem;">
+                    <h4>17. JSON.parse() and JSON.stringify()</h4>
+                    <p>Convert between JSON and JavaScript objects. parse() converts string to object, stringify() does opposite.</p>
+                </div>
+
+                <div class="info-card" style="margin-bottom: 1rem;">
+                    <h4>18. try/catch</h4>
+                    <p>Error handling. try block runs code, catch block handles errors if they occur.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Otavio Juan Menoni - All Rights Reserved</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;">Software Development Student @ Bow Valley College</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
